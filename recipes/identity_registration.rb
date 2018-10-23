@@ -77,6 +77,7 @@ end
 # Register Orchestration Internal-Endpoint
 openstack_endpoint service_type do
   service_name service_name
+  interface 'internal'
   url internal_heat_endpoint.to_s
   region region
   connection_params connection_params
@@ -142,6 +143,7 @@ end
 # Register Heat API CloudFormation Internal-Endpoint
 openstack_endpoint 'cloudformation' do
   service_name 'heat-cfn'
+  interface 'internal'
   url internal_heat_cfn_endpoint.to_s
   region region
   connection_params connection_params
